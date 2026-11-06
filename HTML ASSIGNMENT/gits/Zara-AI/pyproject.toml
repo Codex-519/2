@@ -1,0 +1,28 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "zara-ai"
+version = "0.1.0"
+description = "Local-first modular AI companion for Zara"
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = [
+    "httpx>=0.27,<1",
+]
+
+[project.optional-dependencies]
+voice = [
+    "huggingface-hub>=0.24,<2",
+    "numpy>=2,<3",
+    "pocket-tts==4.0.1",
+    "PyYAML>=6,<7",
+    "sounddevice>=0.5,<1",
+]
+
+[project.scripts]
+zara-ai = "zara_ai.__main__:main"
+
+[tool.setuptools.packages.find]
+include = ["zara_ai*"]

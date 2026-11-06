@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Time Table</title>
+
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+        }
+
+        table {
+            border-collapse: collapse;
+            width: 650px;
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        caption {
+            border: 2px solid black;
+            border-bottom: none;
+            font-size: 24px;
+            font-weight: bold;
+            padding: 10px;
+        }
+
+        th, td {
+            border: 2px solid black;
+            padding: 10px;
+            text-align: center;
+            font-weight: bold;
+        }
+
+        th {
+            background-color: #f2f2f2;
+        }
+
+        .hours {
+            writing-mode: vertical-rl;
+            transform: rotate(180deg);
+            font-size: 18px;
+        }
+
+        .lunch {
+            font-size: 18px;
+        }
+    </style>
+</head>
+
+<body>
+
+<table>
+
+    <caption>Time Table</caption>
+
+    <tr>
+        <th></th>
+        <th>Mon</th>
+        <th>Tue</th>
+        <th>Wed</th>
+        <th>Thu</th>
+        <th>Fri</th>
+    </tr>
+
+    <tr>
+        <td rowspan="5" class="hours">Hours</td>
+        <td>Science</td>
+        <td>Maths</td>
+        <td>Science</td>
+        <td>Maths</td>
+        <td>Arts</td>
+    </tr>
+
+    <tr>
+        <td>Social</td>
+        <td>History</td>
+        <td>English</td>
+        <td>Social</td>
+        <td>Sports</td>
+    </tr>
+
+    <tr>
+        <td colspan="5" class="lunch">LUNCH</td>
+    </tr>
+
+    <tr>
+        <td>Science</td>
+        <td>Maths</td>
+        <td>Science</td>
+        <td>Maths</td>
+        <td rowspan="2">Project</td>
+    </tr>
+
+    <tr>
+        <td>Social</td>
+        <td>History</td>
+        <td>English</td>
+        <td>Social</td>
+    </tr>
+
+</table>
+
+</body>
+</html>

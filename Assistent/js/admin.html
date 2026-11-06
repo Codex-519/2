@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Admin Panel</title>
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+
+<body>
+
+<div class="admin">
+
+    <h1>Business Admin Panel</h1>
+
+    <p class="subtitle">
+        Update your website information
+    </p>
+
+
+    <label>Business Name</label>
+
+    <input
+        type="text"
+        id="name"
+        placeholder="Business Name"
+    >
+
+
+    <label>Phone Number</label>
+
+    <input
+        type="text"
+        id="phone"
+        placeholder="Phone Number"
+    >
+
+
+    <label>Service 1</label>
+
+    <input
+        type="text"
+        id="service1"
+        placeholder="Service"
+    >
+
+    <input
+        type="text"
+        id="price1"
+        placeholder="Price"
+    >
+
+
+    <label>Service 2</label>
+
+    <input
+        type="text"
+        id="service2"
+        placeholder="Service"
+    >
+
+    <input
+        type="text"
+        id="price2"
+        placeholder="Price"
+    >
+
+
+    <label>Service 3</label>
+
+    <input
+        type="text"
+        id="service3"
+        placeholder="Service"
+    >
+
+    <input
+        type="text"
+        id="price3"
+        placeholder="Price"
+    >
+
+
+    <label>Opening Hours</label>
+
+    <input
+        type="text"
+        id="hours"
+        placeholder="9:00 AM - 9:00 PM"
+    >
+
+
+    <button onclick="saveData()">
+        SAVE CHANGES
+    </button>
+
+
+    <a href="index.html" class="back">
+        ← View Website
+    </a>
+
+</div>
+
+
+<script>
+
+function saveData() {
+
+    const data = {
+
+        name: document.getElementById("name").value,
+
+        phone: document.getElementById("phone").value,
+
+        service1:
+            document.getElementById("service1").value,
+
+        price1:
+            document.getElementById("price1").value,
+
+        service2:
+            document.getElementById("service2").value,
+
+        price2:
+            document.getElementById("price2").value,
+
+        service3:
+            document.getElementById("service3").value,
+
+        price3:
+            document.getElementById("price3").value,
+
+        hours:
+            document.getElementById("hours").value
+
+    };
+
+
+    localStorage.setItem(
+        "businessData",
+        JSON.stringify(data)
+    );
+
+
+    alert("Website updated successfully!");
+
+
+    window.location.href = "index.html";
+
+}
+
+</script>
+
+</body>
+
+</html>
