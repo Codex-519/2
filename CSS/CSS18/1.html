@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* .cont {
+            border: 2px solid black;
+            margin: auto;
+            width: 20vw;
+            /* transform: translate(20px, 10px)  scaleX(1.5) rotate(5deg) scaleY(1) skewX(2deg); */
+        /* transform: scale(2,1.2) skew(20deg);
+
+        } */
+        /* 
+        .sub {
+            position: relative;
+        }
+        .sub1 p{
+            display: block;
+            position: absolute;
+            display: none;
+            
+
+        }
+
+        .sub1:hover>p{
+            display: block;
+            
+
+        }  */
+        .parent {
+            height: 500px;
+            width: 400px;
+            margin: 20%;
+            perspective: 600px;
+            border: 10px solid black;
+            background-color: red;
+            border-radius: 15%;
+            /* transform: rotate(-25deg); */
+
+        }
+
+        .child {
+            width: 80px;
+            background-color: paleturquoise;
+            border-radius: 25%;
+            margin:60px;
+            margin-left: 150px;
+            border: 10px solid darkblue;
+            padding: 30px;
+            /* transform: scale3d(1, 1.4 , 4.5 ) rotate3d(1,1.3,1,45deg) */
+            transition: all 2s ease-in ;
+            /* transition-delay: 2s; */
+            
+            
+        }
+        .parent:hover >.child {
+            transform: scale3d(1.3, 2, 5) rotate3d(1,1,1,45deg);
+            background-color: pink;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- 
+    <div class="cont">
+        <div class="sub"><a href="s">home</a>
+            <div class="sub1"> <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa, adipisci repellendus!
+                Laudantium dignissimos hic eius labore aperiam voluptates quod cupiditate nobis facilis assumenda
+                tempore reiciendis dolorem vero, natus eos obcaecati est facere accusamus quas dolore! Ducimus molestias
+                laudantium dolorum quod!</p></div>
+        </div>
+        <p>Lorem Lorem ipsum, dolor sit amet consectetur adipisicing elit. Optio omnis dolore nostrum animi nesciunt
+            officiis, exercitationem magnam amet dolorem tempore, cum eius quae velit consequatur est cupiditate dolores
+            quod ut? Animi exercitationem dolorum quis quibusdam esse pariatur voluptatem ipsa quas provident quia totam
+            asperiores laboriosam delectus nostrum voluptas ipsum dicta veniam vel nulla, deleniti id distinctio
+            reprehenderit! Fuga culpa eaque libero vero, error, ducimus quibusdam eos nihil nulla obcaecati illo
+            temporibus consequatur, consectetur dignissimos porro velit ad commodi. Velit explicabo accusamus, nam
+            aspernatur laudantium nobis harum voluptatem pariatur a magni quis. Nam accusamus perspiciatis ab quisquam
+            cupiditate cum, ut ullam! ipsum dolor sit amet, consectetur adipisicing elit. Doloremque adipisci eos
+            mollitia, accusantium fuga iusto vitae non. Quibusdam esse doloribus aspernatur, harum magnam quas aperiam
+            enim quaerat iusto ipsa adipisci amet cum minima distinctio aliquam iste odio. Officiis, necessitatibus
+            ipsum.</p>
+    </div> -->
+    <div class="parent">
+        <div class="child">Lorem ipsum dolor sit amet consectetur adipisicing elit. Est aspernatur excepturi numquam
+        </div>
+    </div>
+
+</body>
+
+</html>

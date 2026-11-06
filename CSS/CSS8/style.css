@@ -1,0 +1,40 @@
+ul li:last-child{
+            background-color: red
+        }    
+    
+        ul li{
+            list-style-type: none;
+        }
+    
+        ul li:hover::before {
+            content:"*";
+        }
+
+.container img {
+    display: none;
+}
+
+.container:hover img {
+    display: block;
+}
+
+.cont {
+     width: 100px;
+     height: 20px;
+    border: 2px solid black;
+}
+
+.cont:hover img {
+    display: block;
+}
+
+.cont:focus{
+    outline: 3px solid blue;
+    background-color: red;
+    color: white;
+     border:none;
+}
+
+.cont:hover img {
+     display: block;
+}

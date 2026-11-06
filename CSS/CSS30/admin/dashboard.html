@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Admin Dashboard | Aurelian Market</title>
+    <link rel="stylesheet" href="../client/css/style.css" />
+    <link rel="stylesheet" href="css/admin.css" />
+  </head>
+  <body class="admin-shell">
+    <header class="admin-topbar">
+      <div class="container">
+        <div class="brand" style="color: #fff;">
+          <span class="brand-mark">A</span>
+          <span>Aurelian Admin</span>
+        </div>
+        <nav class="admin-nav">
+          <a href="dashboard.html">Dashboard</a>
+          <a href="products.html">Products</a>
+          <a href="orders.html">Orders</a>
+          <a href="users.html">Users</a>
+        </nav>
+      </div>
+    </header>
+
+    <main class="container">
+      <div class="admin-card-grid">
+        <div class="admin-card">
+          <h3>Revenue</h3>
+          <strong data-stat="₹4.8L">₹4.8L</strong>
+        </div>
+        <div class="admin-card">
+          <h3>Orders</h3>
+          <strong data-stat="1,284">1,284</strong>
+        </div>
+        <div class="admin-card">
+          <h3>Customers</h3>
+          <strong data-stat="8,910">8,910</strong>
+        </div>
+        <div class="admin-card">
+          <h3>Conversion</h3>
+          <strong data-stat="3.7%">3.7%</strong>
+        </div>
+      </div>
+
+      <table class="admin-table">
+        <thead>
+          <tr>
+            <th>Order #</th>
+            <th>Customer</th>
+            <th>Status</th>
+            <th>Total</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>ORD-1024</td>
+            <td>Riya N.</td>
+            <td>Paid</td>
+            <td>₹7,499</td>
+          </tr>
+          <tr>
+            <td>ORD-1025</td>
+            <td>Harsh P.</td>
+            <td>Shipped</td>
+            <td>₹2,399</td>
+          </tr>
+          <tr>
+            <td>ORD-1026</td>
+            <td>Priya T.</td>
+            <td>Processing</td>
+            <td>₹1,899</td>
+          </tr>
+        </tbody>
+      </table>
+    </main>
+
+    <script src="js/admin.js"></script>
+  </body>
+</html>

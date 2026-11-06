@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cart | Aurelian Market</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/cart.css" />
+    <link rel="stylesheet" href="css/responsive.css" />
+  </head>
+  <body>
+    <div class="topbar">
+      <div class="container topbar-inner">
+        <span>Free shipping on orders above ₹2,000</span>
+        <span>New arrivals every Friday</span>
+      </div>
+    </div>
+
+    <header class="header">
+      <div class="container navbar">
+        <a class="brand" href="index.html"><span class="brand-mark">A</span> <span>Aurelian</span></a>
+        <nav class="nav-links">
+          <a href="index.html">Home</a>
+          <a href="shop.html">Shop</a>
+          <a href="about.html">About</a>
+          <a href="contact.html">Contact</a>
+        </nav>
+        <div class="nav-actions">
+          <a class="wishlist-chip" href="wishlist.html">♡ <span class="wishlist-badge" data-wishlist-count>0</span></a>
+          <a class="cart-chip" href="cart.html">🛒 <span class="cart-badge" data-cart-count>0</span></a>
+          <a class="primary-btn" href="login.html">Login</a>
+        </div>
+      </div>
+    </header>
+
+    <main class="cart-page">
+      <div class="container">
+        <div class="breadcrumbs">
+          <a href="index.html">Home</a>
+          <span>›</span>
+          <span>Cart</span>
+        </div>
+        <div class="cart-layout">
+          <div class="cart-items" id="cartItems"></div>
+          <aside class="summary-card">
+            <h3>Order summary</h3>
+            <div class="summary-row"><span>Subtotal</span><strong id="cartSubtotal">₹0</strong></div>
+            <div class="summary-row"><span>Shipping</span><strong>₹199</strong></div>
+            <div class="summary-row"><span>Discount</span><strong>−₹0</strong></div>
+            <div class="summary-row total"><span>Total</span><strong id="cartTotal">₹0</strong></div>
+            <a class="primary-btn" href="checkout.html">Proceed to checkout</a>
+          </aside>
+        </div>
+      </div>
+    </main>
+
+    <script src="js/products.js"></script>
+    <script src="js/cart.js"></script>
+    <script src="js/main.js"></script>
+  </body>
+</html>

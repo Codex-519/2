@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        ul li:last-child{
+            background-color: red
+        }    
+    
+        ul li{
+            list-style-type: none;
+        }
+    
+        ul li:hover::before {
+            content:"*";
+        }
+
+        .container {
+            width: 700px;
+            height: 500px;
+            border: 2px solid black;
+        }
+
+        .container img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: none;
+        }
+
+        .container:hover img {
+            display: block;
+        }
+
+        .container:focus{
+            outline: 3px solid blue;
+            background-color: red;
+            color: white;
+            border:none;
+        }
+
+        .cont {
+            width: 100px;
+            height: 20px;
+            border: 2px solid black;
+        }
+
+        .cont:hover img {
+            display: block;
+        }
+
+        .cont:focus{
+            outline: 3px solid blue;
+            background-color: red;
+            color: white;
+            border:none;
+        }
+
+        .cont:hover img {
+            display: block;
+        }
+I
+    </style>
+</head>
+<body>
+    <ul>
+        <li>first</li>
+        <li>second</li>
+        <li>Third</li>
+        <li>fourth</li>
+        <li>fith</li>
+        <li>sixth</li>
+        <li>seventh</li>
+    </ul>
+</body>
+</html>

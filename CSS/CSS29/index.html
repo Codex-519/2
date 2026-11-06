@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kidz World | Shop. Have Fun. Repeat.</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header class="navbar">
+        <h2>KIDZ WORLD</h2>
+
+        <div class="cart">
+            <span class="cart-icon">🛒</span>
+            Cart items (<span id="cart-count">0</span>)
+        </div>
+    </header>
+
+    <section class="hero">
+
+        <div class="hero-text">
+            <h1>Shop.<br>Have Fun.<br>Repeat.</h1>
+            <p>#NewAndNow</p>
+        </div>
+
+        <div class="hero-image">
+            <img src="15.png" alt="Happy children">
+        </div>
+
+        <div class="blue-shape"></div>
+        <div class="yellow-shape"></div>
+        <div class="red-shape"></div>
+        <div class="bottom-wave"></div>
+
+    </section>
+
+    <section class="product-section">
+        <h2>Discover New Books</h2>
+
+        <div class="product-grid">
+
+            <article class="product-card">
+                <img src="1.png" alt="This was our pact book">
+                <h3>This was our pact</h3>
+                <p>Ryan Andrews</p>
+                <div class="product-bottom">
+                    <strong>$7.49</strong>
+                    <button onclick="addToCart()">Add 🛒</button>
+                </div>
+            </article>
+
+            <article class="product-card">
+                <img src="2.png" alt="Famous Five book">
+                <h3>The Famous Five</h3>
+                <p>Enid Blyton</p>
+                <div class="product-bottom">
+                    <strong>$4.59</strong>
+                    <button onclick="addToCart()">Add 🛒</button>
+                </div>
+            </article>
+
+            <article class="product-card">
+                <img src="3.png" alt="Matilda book">
+                <h3>Matilda</h3>
+                <p>Roald Dahl</p>
+                <div class="product-bottom">
+                    <strong>$6.80</strong>
+                    <button onclick="addToCart()">Add 🛒</button>
+                </div>
+            </article>
+
+            <article class="product-card">
+                <img src="4.png" alt="Harry Potter book">
+                <h3>Harry Potter</h3>
+                <p>J.K. Rowling</p>
+                <div class="product-bottom">
+                    <strong>$10.00</strong>
+                    <button onclick="addToCart()">Add 🛒</button>
+                </div>
+            </article>
+
+            <article class="product-card">
+                <img src="5.png" alt="For Young Readers nook">
+                <h3>For Young Readers</h3>
+                <p>Ruskin Bond</p>
+                <div class="product-bottom">
+                    <strong>$7.29</strong>
+                    <button onclick="addToCart()">Add 🛒</button>
+                </div>
+            </article>
+
+            <article class="product-card">
+                <img src="6.png" alt="Wimpy Kid-DIY book">
+                <h3>Wimpy Kid-DIY</h3>
+                <p>Jeff Kinney</p>
+                <div class="product-bottom">
+                    <strong>$4.99</strong>
+                    <button onclick="addToCart()">Add 🛒</button>
+                </div>
+            </article>
+
+        </div>
+    </section>
+
+    <section class="product-section">
+        <h2>Discover New Games</h2>
+
+        <div class="product-grid games-grid">
+
+            <article class="product-card">
+                <img src="7.png" alt="Dart Board game">
+                <h3>Dart Board</h3> 
+                <p>Wooden Board, 16 inches</p>
+                <div class="product-bottom">
+                    <strong>$17.49</strong>
+                    <button onclick="addToCart()">Add 🛒</button>
+                </div>
+            </article>
+
+            <article class="product-card">
+                <img src="8.png" alt="Connect four game">
+                <h3>Connect 4</h3>
+                <p>Board game, multiplayer</p>
+                <div class="product-bottom">
+                    <strong>$19.99</strong>
+                    <button onclick="addToCart()">Add 🛒</button>
+                </div>
+            </article>
+
+            <article class="product-card">
+                <img src="9.png" alt="Wooden blocks game">
+                <h3>Jenga</h3>
+                <p>Wooden blocks, 54 pieces</p>
+                <div class="product-bottom">
+                    <strong>$20.99</strong>
+                    <button onclick="addToCart()">Add 🛒</button>
+                </div>
+            </article>
+
+            <article class="product-card">
+                <img src="10.png" alt="Board game">
+                <h3>Monopoly</h3>
+                <p>Classic family board game</p>
+                <div class="product-bottom">
+                    <strong>$19.49</strong>
+                    <button onclick="addToCart()">Add 🛒</button>
+                </div>
+            </article>
+
+        </div>
+    </section>
+
+    <section class="product-section">
+        <h2>Handmade with Love</h2>
+
+        <div class="product-grid handmade-grid">
+
+            <article class="product-card">
+                <img src="11.png" alt="Bookmarks and stationery">
+                <h3>Bookmarks</h3>
+                <p>Handmade with love</p>
+                <div class="product-bottom">
+                    <strong>$12.49</strong>
+                    <button onclick="addToCart()">Add 🛒</button>
+                </div>
+            </article>
+
+            <article class="product-card">
+                <img src="12.png" alt="Birthday card">
+                <h3>Birthday Card</h3>
+                <p>Handmade with love</p>
+                <div class="product-bottom">
+                    <strong>$19.99</strong>
+                    <button onclick="addToCart()">Add 🛒</button>
+                </div>
+            </article>
+
+            <article class="product-card">
+                <img src="13.png" alt="Stuffed toys">
+                <h3>Stuffed Toys</h3>
+                <p>Handmade with love</p>
+                <div class="product-bottom">
+                    <strong>$15.99</strong>
+                    <button onclick="addToCart()">Add 🛒</button>
+                </div>
+            </article>
+
+            <article class="product-card">
+                <img src="14.png" alt="Dream catcher art">
+                <h3>Dream Catcher Drawing</h3>
+                <p>Handmade with love</p>
+                <div class="product-bottom">
+                    <strong>$18.49</strong>
+                    <button onclick="addToCart()">Add 🛒</button>
+                </div>
+            </article>
+
+        </div>
+    </section>
+
+    <footer>
+        <p>Made with ❤️ for little shoppers | KIDZ WORLD</p>
+    </footer>
+
+    <script>
+        let cartCount = 0;
+
+        function addToCart() {
+            cartCount++;
+            document.getElementById("cart-count").textContent = cartCount;
+        }
+    </script>
+
+</body>
+</html>

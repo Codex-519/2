@@ -1,0 +1,694 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Iframe Assignment - Q1 to Q30</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+
+        section {
+            margin-bottom: 40px;
+            padding: 20px;
+            border: 1px solid #ddd;
+        }
+
+        iframe {
+            border: none;
+        }
+
+        .responsive-iframe {
+            width: 100%;
+            height: 400px;
+            border: none;
+            margin: 10px;
+        }
+
+        .side-by-side {
+            display: flex;
+            gap: 4%;
+        }
+
+        .side-by-side iframe {
+            width: 48%;
+            height: 350px;
+        }
+
+        .video-container {
+            width: 100%;
+            max-width: 800px;
+            aspect-ratio: 16 / 9;
+        }
+
+        .video-container iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+
+        .card {
+            width: 90%;
+            max-width: 800px;
+            margin: auto;
+            padding: 20px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+            border-radius: 15px;
+        }
+
+        .card iframe {
+            width: 100%;
+            height: 400px;
+            border-radius: 10px;
+        }
+
+        .full-page {
+            height: 600px;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .full-page header {
+            background: #333;
+            color: white;
+            padding: 15px;
+            text-align: center;
+        }
+
+        .full-page iframe {
+            flex: 1;
+            width: 100%;
+        }
+
+        .button-link {
+            display: inline-block;
+            padding: 10px 20px;
+            background: #333;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+
+        @media (max-width: 600px) {
+            .side-by-side {
+                flex-direction: column;
+            }
+
+            .side-by-side iframe {
+                width: 100%;
+                margin-bottom: 15px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+
+
+    <!-- ==================== QUESTION 1 ==================== -->
+    <section>
+        <h2>Question 1</h2>
+
+        <iframe
+            src="https://www.example.com"
+            width="100%"
+            height="400"
+            title="Example Website"
+            style="border:none;">
+        </iframe>
+    </section>
+
+
+    <!-- ==================== QUESTION 2 ==================== -->
+    <section>
+        <h2>Question 2</h2>
+
+        <a href="https://www.example.com"
+           target="exampleFrame">
+            Open Example Site
+        </a>
+
+        <br><br>
+
+        <iframe
+            name="exampleFrame"
+            width="100%"
+            height="300"
+            title="Example Site Frame">
+        </iframe>
+    </section>
+
+
+    <!-- ==================== QUESTION 3 ==================== -->
+    <section>
+        <h2>Question 3</h2>
+
+        <iframe
+            width="560"
+            height="315"
+            src="https://www.youtube.com/embed/dQw4w9WgXcQ"
+            allow="fullscreen; gyroscope"
+            allowfullscreen
+            title="YouTube Video">
+        </iframe>
+    </section>
+
+
+    <!-- ==================== QUESTION 4 ==================== -->
+    <section>
+        <h2>Question 4</h2>
+
+        <iframe
+            class="responsive-iframe"
+            src="https://www.example.com"
+            title="Responsive Example Website">
+        </iframe>
+    </section>
+
+
+    <!-- ==================== QUESTION 5 ==================== -->
+    <section>
+        <h2>Question 5</h2>
+
+        <iframe
+            src="https://www.example.com"
+            width="800"
+            height="450"
+            allow="fullscreen"
+            title="Fullscreen Example">
+        </iframe>
+    </section>
+
+
+    <!-- ==================== QUESTION 6 ==================== -->
+    <section>
+        <h2>Question 6</h2>
+
+        <iframe
+            src="https://www.example.com"
+            width="100%"
+            height="500"
+            allow="gyroscope"
+            title="Interactive Gyroscope Content">
+        </iframe>
+    </section>
+
+
+    <!-- ==================== QUESTION 7 ==================== -->
+    <section>
+        <h2>Question 7</h2>
+
+        <iframe
+            src="https://device.example.com"
+            width="600"
+            height="400"
+            allow="usb"
+            title="Device Control">
+        </iframe>
+    </section>
+
+
+    <!-- ==================== QUESTION 8 ==================== -->
+    <section>
+        <h2>Question 8</h2>
+
+        <iframe
+            src="https://www.example.com"
+            width="800"
+            height="450"
+            allow="fullscreen; gyroscope; usb"
+            title="All Permissions Example">
+        </iframe>
+    </section>
+
+
+    <!-- ==================== QUESTION 9 ==================== -->
+    <section>
+        <h2>Question 9</h2>
+
+        <div class="side-by-side">
+
+            <iframe
+                src="https://www.example.com"
+                allow="fullscreen"
+                title="Fullscreen Frame">
+            </iframe>
+
+            <iframe
+                src="https://www.example.com"
+                allow="gyroscope"
+                title="Gyroscope Frame">
+            </iframe>
+
+        </div>
+    </section>
+
+
+    <!-- ==================== QUESTION 10 ==================== -->
+    <section>
+        <h2>Question 10</h2>
+
+        <nav>
+            <a href="https://www.example.com" target="navigationFrame">
+                Example
+            </a> |
+            <a href="https://example.org" target="navigationFrame">
+                Example Org
+            </a> |
+            <a href="https://example.net" target="navigationFrame">
+                Example Net
+            </a>
+        </nav>
+
+        <br><br>
+
+        <iframe
+            name="navigationFrame"
+            width="100%"
+            height="400"
+            title="Navigation Content">
+        </iframe>
+    </section>
+
+
+    <!-- ==================== QUESTION 11 ==================== -->
+    <section>
+        <h2>Question 11</h2>
+
+        <iframe
+            width="560"
+            height="315"
+            src="https://www.youtube.com/embed/dQw4w9WgXcQ"
+            allow="fullscreen; gyroscope"
+            allowfullscreen
+            title="Video With Gyroscope">
+        </iframe>
+    </section>
+
+
+    <!-- ==================== QUESTION 12 ==================== -->
+    <section>
+        <h2>Question 12</h2>
+
+        <iframe
+            src="https://www.example.com"
+            width="100%"
+            height="300"
+            title="Most Restrictive Example">
+        </iframe>
+    </section>
+
+
+    <!-- ==================== QUESTION 13 ==================== -->
+    <section>
+        <h2>Question 13</h2>
+
+        <div class="video-container">
+
+            <iframe
+                src="https://www.example.com"
+                title="Responsive Aspect Ratio Frame">
+            </iframe>
+
+        </div>
+    </section>
+
+
+    <!-- ==================== QUESTION 14 ==================== -->
+    <section>
+        <h2>Question 14</h2>
+
+        <h3>Iframe Permission Demo</h3>
+
+        <p>
+            This page demonstrates iframes with different permissions.
+        </p>
+
+        <iframe
+            src="https://device.example.com"
+            width="600"
+            height="300"
+            allow="usb"
+            title="USB Permission Frame">
+        </iframe>
+
+        <br><br>
+
+        <iframe
+            src="https://www.example.com"
+            width="700"
+            height="350"
+            allow="fullscreen"
+            title="Fullscreen Permission Frame">
+        </iframe>
+    </section>
+
+
+    <!-- ==================== QUESTION 15 ==================== -->
+    <section>
+        <h2>Question 15</h2>
+
+        <iframe
+            src="https://www.example.com"
+            width="100%"
+            height="400"
+            allow="fullscreen"
+            title="Completed Example Frame"
+            style="border:none;">
+        </iframe>
+    </section>
+
+
+    <!-- ==================== QUESTION 16 ==================== -->
+    <section>
+        <h2>Question 16</h2>
+
+        <iframe
+            src="https://www.example.com"
+            width="100%"
+            height="500"
+            allow="fullscreen; gyroscope"
+            allowfullscreen
+            title="Fullscreen and Gyroscope Demo">
+        </iframe>
+    </section>
+
+
+    <!-- ==================== QUESTION 17 ==================== -->
+    <section>
+        <h2>Question 17</h2>
+
+        <div class="side-by-side">
+
+            <iframe
+                src="https://device.example.com"
+                allow="usb"
+                title="USB Device Control">
+            </iframe>
+
+            <iframe
+                src="https://www.example.com"
+                allow="gyroscope"
+                title="Gyroscope Device Control">
+            </iframe>
+
+        </div>
+    </section>
+
+
+    <!-- ==================== QUESTION 18 ==================== -->
+    <section>
+        <h2>Question 18</h2>
+
+        <iframe
+            src="https://www.example.com"
+            width="100%"
+            height="500"
+            allow="fullscreen"
+            title="Minimal Fullscreen Frame">
+        </iframe>
+    </section>
+
+
+    <!-- ==================== QUESTION 19 ==================== -->
+    <section>
+        <h2>Question 19</h2>
+
+        <iframe
+            src="https://www.example.com"
+            width="100%"
+            height="300"
+            allow="fullscreen"
+            title="Fullscreen Allowed">
+        </iframe>
+
+        <br><br>
+
+        <iframe
+            src="https://www.example.com"
+            width="100%"
+            height="300"
+            title="No Permissions Allowed">
+        </iframe>
+    </section>
+
+
+    <!-- ==================== QUESTION 20 ==================== -->
+    <section>
+        <h2>Question 20</h2>
+
+        <iframe
+            src="https://www.example.com"
+            width="100%"
+            height="420"
+            allow="gyroscope"
+            title="Styled Gyroscope Frame"
+            style="
+                border:none;
+                box-shadow:0 4px 12px rgba(0,0,0,0.2);
+                border-radius:15px;
+            ">
+        </iframe>
+    </section>
+
+
+    <!-- ==================== QUESTION 21 ==================== -->
+    <section>
+        <h2>Question 21</h2>
+
+        <a
+            href="https://device.example.com"
+            target="myDeviceFrame"
+            class="button-link">
+            Open Device Content
+        </a>
+
+        <br><br>
+
+        <iframe
+            name="myDeviceFrame"
+            width="100%"
+            height="400"
+            allow="usb"
+            title="Device USB Frame">
+        </iframe>
+    </section>
+
+
+    <!-- ==================== QUESTION 22 ==================== -->
+    <section>
+        <h2>Question 22</h2>
+
+        <iframe
+            src="https://www.example.com"
+            width="700"
+            height="450"
+            allow="fullscreen; usb"
+            title="Fullscreen and USB Frame"
+            style="border:none;">
+        </iframe>
+    </section>
+
+
+    <!-- ==================== QUESTION 23 ==================== -->
+    <section>
+        <h2>Question 23</h2>
+
+        <div class="video-container">
+
+            <iframe
+                src="https://www.youtube.com/embed/dQw4w9WgXcQ"
+                allow="fullscreen; gyroscope"
+                allowfullscreen
+                title="Responsive Video Player">
+            </iframe>
+
+        </div>
+    </section>
+
+
+    <!-- ==================== QUESTION 24 ==================== -->
+    <section>
+        <h2>Question 24</h2>
+
+        <iframe
+            src="https://www.example.com"
+            width="500"
+            height="250"
+            allow="fullscreen"
+            title="Fullscreen Frame">
+        </iframe>
+
+        <br><br>
+
+        <iframe
+            src="https://www.example.com"
+            width="600"
+            height="300"
+            allow="gyroscope"
+            title="Gyroscope Frame">
+        </iframe>
+
+        <br><br>
+
+        <iframe
+            src="https://device.example.com"
+            width="700"
+            height="350"
+            allow="usb"
+            title="USB Frame">
+        </iframe>
+    </section>
+
+
+    <!-- ==================== QUESTION 25 ==================== -->
+    <section class="full-page">
+
+        <header>
+            <h2>Full Page Iframe Layout</h2>
+        </header>
+
+        <iframe
+            src="https://www.example.com"
+            allow="fullscreen; gyroscope; usb"
+            title="Full Page Example Content">
+        </iframe>
+
+    </section>
+
+
+    <!-- ==================== QUESTION 26 ==================== -->
+    <section>
+        <h2>Question 26</h2>
+
+        <iframe
+            width="560"
+            height="315"
+            src="https://www.youtube.com/embed/dQw4w9WgXcQ"
+            allow="fullscreen; gyroscope"
+            allowfullscreen
+            title="Video">
+        </iframe>
+    </section>
+
+
+    <!-- ==================== QUESTION 27 ==================== -->
+    <section>
+        <h2>Question 27</h2>
+
+        <ul>
+            <li>
+                <a href="https://www.example.com"
+                   target="sameFrame">
+                    Example Website
+                </a>
+            </li>
+
+            <li>
+                <a href="https://example.org"
+                   target="sameFrame">
+                    Example Org
+                </a>
+            </li>
+
+            <li>
+                <a href="https://example.net"
+                   target="sameFrame">
+                    Example Net
+                </a>
+            </li>
+        </ul>
+
+        <iframe
+            name="sameFrame"
+            width="100%"
+            height="400"
+            allow="fullscreen"
+            title="Common Navigation Frame">
+        </iframe>
+    </section>
+
+
+    <!-- ==================== QUESTION 28 ==================== -->
+    <section>
+        <h2>Question 28</h2>
+
+        <div class="card">
+
+            <iframe
+                src="https://www.example.com"
+                allow="gyroscope"
+                title="Modern Gyroscope Card">
+            </iframe>
+
+        </div>
+    </section>
+
+
+    <!-- ==================== QUESTION 29 ==================== -->
+    <section>
+        <h2>Question 29</h2>
+
+        <div class="side-by-side">
+
+            <iframe
+                src="https://www.example.com"
+                allow="fullscreen"
+                title="Version A - Fullscreen Only">
+            </iframe>
+
+            <iframe
+                src="https://www.example.com"
+                allow="fullscreen; gyroscope; usb"
+                title="Version B - All Permissions">
+            </iframe>
+
+        </div>
+    </section>
+
+
+    <!-- ==================== QUESTION 30 ==================== -->
+    <section>
+        <h2>Question 30</h2>
+
+        <!-- Normal webpage does not need special permissions -->
+        <iframe
+            src="https://www.example.com"
+            width="100%"
+            height="300"
+            title="Normal Webpage"
+            style="border:none;">
+        </iframe>
+
+        <br><br>
+
+        <!-- Fullscreen and gyroscope are requested for this interactive content -->
+        <iframe
+            src="https://www.example.com"
+            width="100%"
+            height="400"
+            allow="fullscreen; gyroscope"
+            allowfullscreen
+            title="Fullscreen and Gyroscope Content">
+        </iframe>
+
+        <br><br>
+
+        <!-- USB permission is requested for device-related content -->
+        <iframe
+            src="https://device.example.com"
+            width="100%"
+            height="400"
+            allow="usb"
+            title="USB Device Content">
+        </iframe>
+
+    </section>
+
+
+</body>
+</html>

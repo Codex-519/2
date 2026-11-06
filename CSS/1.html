@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html, body {
+            min-height: 100%;
+        }
+
+        .navbar {
+            background-color: red;
+            display: flex;
+            align-items: center;
+            padding: 0 10%;
+            justify-content: space-between;
+            height: 60px;
+        }
+
+        .navbar ul {
+            display: flex;
+            gap: 20px;
+            list-style-type: none;
+        }
+
+        main {
+            display: flex;
+            min-height: calc(100vh - 60px);
+            width: 100%;
+        }
+
+        .cont1, .cont2 {
+            width: 50%;
+            display: flex;
+        }
+
+        .cont1 {
+            border-right: 3px solid black;
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <nav class="navbar">
+        <h1>My Website</h1>
+
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <div class="cont1">cont1</div>
+        <div class="cont2">cont2</div>
+    </main>
+
+</body>
+</html>

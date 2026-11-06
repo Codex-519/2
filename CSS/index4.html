@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Liberetty - Home Project</title>
+
+  <style>
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    body {
+      background-color: #d8deda;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      padding: 20px;
+    }
+
+    .container {
+      width: 1100px;
+      height: 650px;
+      background-color: #e5ebe6;
+      border-radius: 12px;
+      position: relative;
+      overflow: hidden;
+      box-shadow: 0px 10px 30px rgba(0,0,0,0.15);
+    }
+
+    .header {
+      width: 100%;
+      height: 70px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding-left: 50px;
+      padding-right: 50px;
+      margin-top: 10px;
+    }
+
+    .logo {
+      font-size: 28px;
+      font-weight: bold;
+      color: #000000;
+    }
+
+    .logo span {
+      color: #ff5533;
+    }
+
+    .nav-links {
+      display: flex;
+      list-style: none;
+      gap: 30px;
+    }
+
+    .nav-links li a {
+      text-decoration: none;
+      color: #333333;
+      font-weight: 600;
+      font-size: 13px;
+      letter-spacing: 1px;
+    }
+
+    .nav-links li a:hover {
+      color: #ff5533;
+    }
+
+    .header-right {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+    }
+
+    .search-btn {
+      background: none;
+      border: none;
+      cursor: pointer;
+      font-size: 16px;
+    }
+
+    .cart-box {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 13px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    .cart-count {
+      background-color: #ff5533;
+      color: white;
+      width: 22px;
+      height: 22px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 11px;
+    }
+
+    .hero {
+      width: 100%;
+      height: 550px;
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+    }
+
+    .hero-text {
+      font-size: 64px;
+      font-weight: 800;
+      color: #1a1a1a;
+      line-height: 1.15;
+      max-width: 850px;
+      z-index: 5;
+    }
+
+    .avatar-img {
+      width: 75px;
+      height: 75px;
+      border-radius: 50%;
+      border: 2px solid #222;
+      vertical-align: middle;
+      margin-left: 8px;
+      margin-right: 8px;
+      object-fit: cover;
+    }
+
+    .black-box {
+      width: 30px;
+      height: 30px;
+      background-color: #1a1a1a;
+      position: absolute;
+      top: 60px;
+      left: 240px;
+      transform: rotate(-15deg);
+      z-index: 2;
+    }
+
+    .green-tag {
+      background-color: #26a98b;
+      color: #000;
+      font-weight: bold;
+      font-size: 11px;
+      padding: 6px 14px;
+      position: absolute;
+      top: 170px;
+      left: 120px;
+      transform: rotate(-12deg);
+      border-radius: 2px;
+      z-index: 3;
+    }
+
+    .product-stamp {
+      position: absolute;
+      top: 90px;
+      right: 320px;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 9px;
+      font-weight: bold;
+      letter-spacing: 0.5px;
+      z-index: 3;
+    }
+
+    .stamp-r {
+      border: 1px solid #1a1a1a;
+      border-radius: 50%;
+      width: 18px;
+      height: 18px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .triangle-small {
+      width: 0;
+      height: 0;
+      border-left: 10px solid transparent;
+      border-right: 10px solid transparent;
+      border-bottom: 20px solid #ff5533;
+      position: absolute;
+      top: 190px;
+      left: 310px;
+      transform: rotate(45deg);
+      z-index: 2;
+    }
+
+    .triangle-big {
+      width: 0;
+      height: 0;
+      border-left: 35px solid transparent;
+      border-right: 35px solid transparent;
+      border-bottom: 70px solid #ff5533;
+      position: absolute;
+      bottom: 70px;
+      right: 430px;
+      transform: rotate(110deg);
+      z-index: 2;
+    }
+
+    .purple-shape {
+      width: 45px;
+      height: 55px;
+      background-color: #7c52d9;
+      position: absolute;
+      right: 140px;
+      bottom: 140px;
+      transform: rotate(20deg);
+      clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+      z-index: 2;
+    }
+
+    .story-circle {
+      width: 95px;
+      height: 95px;
+      background-color: #1a1a1a;
+      border-radius: 50%;
+      position: absolute;
+      bottom: 60px;
+      right: 250px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      cursor: pointer;
+      z-index: 6;
+    }
+
+    .story-circle:hover {
+      background-color: #333;
+    }
+
+    .arrow-icon {
+      font-size: 22px;
+    }
+
+    .bg-lines {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      pointer-events: none;
+      z-index: 1;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+
+    <header class="header">
+      <div class="logo">Liberetty<span>✦</span></div>
+      
+      <ul class="nav-links">
+        <li><a href="#">PRODUCTS ▾</a></li>
+        <li><a href="#">3D MODELS ▾</a></li>
+        <li><a href="#">GALLERY</a></li>
+        <li><a href="#">ABOUT</a></li>
+        <li><a href="#">CONTACT</a></li>
+      </ul>
+
+      <div class="header-right">
+        <button class="search-btn">🔍</button>
+        <div class="cart-box">
+          CART
+          <div class="cart-count">1</div>
+        </div>
+      </div>
+    </header>
+
+    <main class="hero">
+
+      <svg class="bg-lines">
+
+        <path d="M 150 160 Q 100 450, 350 480 T 570 410" stroke="#1a1a1a" stroke-width="1.5" fill="none"/>
+        <circle cx="150" cy="160" r="4" fill="#1a1a1a" />
+
+        <path d="M 520 140 C 580 120, 600 170, 520 190" stroke="#1a1a1a" stroke-width="1.5" fill="none"/>
+
+        <path d="M 970 200 Q 940 230, 970 260 T 970 320 T 970 380" stroke="#1a1a1a" stroke-width="1.5" fill="none"/>
+      </svg>
+
+      <div class="black-box"></div>
+      
+      <div class="green-tag">NEW MODELS</div>
+
+      <div class="product-stamp">
+        <div class="stamp-r">R</div>
+        <div>PRODUCT<br>OF THE DAY</div>
+      </div>
+
+      <div class="triangle-small"></div>
+      <div class="triangle-big"></div>
+      <div class="purple-shape"></div>
+
+      <h1 class="hero-text">
+        We 
+        <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&q=80&w=200" alt="Person" class="avatar-img">
+        produce<br>
+        high-quality furniture<br>
+        for lifestyle
+      </h1>
+
+
+    </main>
+
+  </div>
+
+</body>
+</html>

@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Shop | Aurelian Market</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/responsive.css" />
+  </head>
+  <body>
+    <div class="topbar">
+      <div class="container topbar-inner">
+        <span>Free shipping on orders above ₹2,000</span>
+        <span>New arrivals every Friday</span>
+      </div>
+    </div>
+
+    <header class="header">
+      <div class="container navbar">
+        <a class="brand" href="index.html"><span class="brand-mark">A</span> <span>Aurelian</span></a>
+        <nav class="nav-links">
+          <a href="index.html">Home</a>
+          <a href="shop.html">Shop</a>
+          <a href="shop.html?category=Electronics" class="dropdown">Categories</a>
+          <a href="about.html">About</a>
+          <a href="contact.html">Contact</a>
+        </nav>
+        <div class="nav-actions">
+          <label class="search-box">
+            <span>⌕</span>
+            <input type="text" id="shopSearch" placeholder="Search products" />
+          </label>
+          <a class="wishlist-chip" href="wishlist.html">♡ <span class="wishlist-badge" data-wishlist-count>0</span></a>
+          <a class="cart-chip" href="cart.html">🛒 <span class="cart-badge" data-cart-count>0</span></a>
+          <a class="primary-btn" href="login.html">Login</a>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <section class="page-banner">
+        <div class="container">
+          <div class="breadcrumbs">
+            <a href="index.html">Home</a>
+            <span>›</span>
+            <span>Shop</span>
+          </div>
+          <h1>Shop all products</h1>
+          <p>Thoughtful essentials for everyday living.</p>
+        </div>
+      </section>
+
+      <section class="container shop-layout">
+        <aside class="filters">
+          <div class="filter-group">
+            <h3>Category</h3>
+            <select id="categoryFilter">
+              <option value="all">All categories</option>
+              <option value="Electronics">Electronics</option>
+              <option value="Fashion">Fashion</option>
+              <option value="Beauty">Beauty</option>
+              <option value="Home & Living">Home & Living</option>
+              <option value="Accessories">Accessories</option>
+              <option value="Sports">Sports</option>
+            </select>
+          </div>
+
+          <div class="filter-group">
+            <h3>Price range</h3>
+            <input id="priceRange" type="range" min="500" max="5000" step="100" value="5000" />
+            <div style="margin-top: 10px; color: var(--muted); font-weight: 700;" id="priceValue">Up to ₹5,000</div>
+          </div>
+
+          <div class="filter-group">
+            <h3>Rating</h3>
+            <select id="ratingFilter">
+              <option value="0">Any rating</option>
+              <option value="4">4.0 and above</option>
+              <option value="4.5">4.5 and above</option>
+              <option value="4.8">4.8 and above</option>
+            </select>
+          </div>
+
+          <div class="filter-group">
+            <h3>Sort by</h3>
+            <select id="sortSelect">
+              <option value="featured">Popularity</option>
+              <option value="price-low">Price low to high</option>
+              <option value="price-high">Price high to low</option>
+              <option value="newest">Newest</option>
+              <option value="rating">Rating</option>
+            </select>
+          </div>
+        </aside>
+
+        <div>
+          <div class="shop-toolbar">
+            <div class="result-title">All products</div>
+            <div class="sort-wrap">
+              <select aria-label="Sort products">
+                <option>Showing curated picks</option>
+              </select>
+            </div>
+          </div>
+          <div class="product-grid" id="productGrid"></div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="container footer-grid">
+        <div class="footer-col">
+          <a class="brand" href="index.html"><span class="brand-mark">A</span> <span>Aurelian</span></a>
+          <p style="margin-top: 14px; color: var(--muted);">Thoughtful essentials for everyday life.</p>
+        </div>
+        <div class="footer-col">
+          <h4>About</h4>
+          <ul>
+            <li><a href="about.html">Our story</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Support</h4>
+          <ul>
+            <li><a href="orders.html">Orders</a></li>
+            <li><a href="cart.html">Cart</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Policies</h4>
+          <ul>
+            <li>Privacy</li>
+            <li>Returns</li>
+            <li>Shipping</li>
+          </ul>
+        </div>
+      </div>
+      <div class="container footer-meta">
+        <span>© 2026 Aurelian Market</span>
+        <span>Privacy Policy · Terms</span>
+      </div>
+    </footer>
+
+    <script src="js/products.js"></script>
+    <script src="js/main.js"></script>
+    <script>
+      const params = new URLSearchParams(window.location.search);
+      const wanted = params.get('category');
+      if (wanted) {
+        const categoryField = document.getElementById('categoryFilter');
+        if (categoryField) categoryField.value = wanted;
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,198 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    background: #030712;
+    color: white;
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+h1 {
+    position: absolute;
+    top: 25px;
+    text-align: center;
+    color: #ffd166;
+    letter-spacing: 3px;
+    font-size: 26px;
+}
+
+.solar-system {
+    position: relative;
+    width: 600px;
+    height: 600px;
+    flex-shrink: 0;
+}
+
+/* Fixed Sun at the exact center */
+.sun {
+    position: absolute;
+    width: 48px;
+    height: 48px;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+    background: #ffb703;
+    box-shadow: 0 0 25px #ffb703, 0 0 60px #fb8500;
+    z-index: 2;
+}
+
+/* All orbits share the same center */
+.orbit {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    border: 1px solid #ffffff40;
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    animation: spin linear infinite;
+}
+
+/* Each orbit has its own size and speed */
+.mercury-orbit {
+    width: 80px;
+    height: 80px;
+    animation-duration: 3s;
+}
+
+.venus-orbit {
+    width: 130px;
+    height: 130px;
+    animation-duration: 5s;
+}
+
+.earth-orbit {
+    width: 180px;
+    height: 180px;
+    animation-duration: 7s;
+}
+
+.mars-orbit {
+    width: 230px;
+    height: 230px;
+    animation-duration: 10s;
+}
+
+.jupiter-orbit {
+    width: 300px;
+    height: 300px;
+    animation-duration: 14s;
+}
+
+.saturn-orbit {
+    width: 370px;
+    height: 370px;
+    animation-duration: 18s;
+}
+
+.uranus-orbit {
+    width: 440px;
+    height: 440px;
+    animation-duration: 23s;
+}
+
+.neptune-orbit {
+    width: 520px;
+    height: 520px;
+    animation-duration: 28s;
+}
+
+/* Planet positioned at the top of each orbit */
+.planet {
+    position: absolute;
+    left: 50%;
+    top: 0;
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+}
+
+.mercury {
+    width: 9px;
+    height: 9px;
+    background: #bdbdbd;
+}
+
+.venus {
+    width: 13px;
+    height: 13px;
+    background: #e9b477;
+}
+
+.earth {
+    width: 16px;
+    height: 16px;
+    background: #168cff;
+    box-shadow: 0 0 10px #168cff;
+}
+
+.mars {
+    width: 12px;
+    height: 12px;
+    background: #e76f51;
+}
+
+.jupiter {
+    width: 26px;
+    height: 26px;
+    background: #d4a373;
+}
+
+.saturn {
+    width: 22px;
+    height: 22px;
+    background: #f4d58d;
+}
+
+.ring {
+    position: absolute;
+    width: 36px;
+    height: 12px;
+    top: 5px;
+    left: -7px;
+    border: 2px solid #d6bd86;
+    border-radius: 50%;
+    transform: rotate(-25deg);
+}
+
+.uranus {
+    width: 16px;
+    height: 16px;
+    background: #80deea;
+}
+
+.neptune {
+    width: 16px;
+    height: 16px;
+    background: #4361ee;
+}
+
+/* Continuous orbit rotation */
+@keyframes spin {
+    from {
+        transform: translate(-50%, -50%) rotate(0deg);
+    }
+    to {
+        transform: translate(-50%, -50%) rotate(360deg);
+    }
+}
+
+/* Fit the animation on smaller screens */
+@media (max-width: 650px) {
+    .solar-system {
+        transform: scale(0.62);
+    }
+
+    h1 {
+        font-size: 20px;
+    }
+}

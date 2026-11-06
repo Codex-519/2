@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Orders | Aurelian Market</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/auth.css" />
+    <link rel="stylesheet" href="css/responsive.css" />
+  </head>
+  <body>
+    <header class="header">
+      <div class="container navbar">
+        <a class="brand" href="index.html"><span class="brand-mark">A</span> <span>Aurelian</span></a>
+      </div>
+    </header>
+
+    <main class="auth-shell">
+      <div class="auth-box" style="width: min(760px, 100%);">
+        <h1>My orders</h1>
+        <div id="ordersList" class="auth-form"></div>
+      </div>
+    </main>
+
+    <script src="js/main.js"></script>
+    <script>
+      const ordersList = document.getElementById('ordersList');
+      const order = JSON.parse(localStorage.getItem('aurelian-last-order') || 'null');
+      if (!order) {
+        ordersList.innerHTML = '<div class="empty-state">You have no orders yet.</div>';
+      } else {
+        ordersList.innerHTML = `
+          <div class="info-block" style="padding: 18px; border-radius: 16px; background: #f9f8f5; border: 1px solid var(--line);">
+            <h3>Order ${order.id}</h3>
+            <p>Placed on ${new Date(order.date).toLocaleDateString('en-IN')}</p>
+            <p>Status: <strong>${order.status}</strong></p>
+            <p>Total: <strong>${new Intl.NumberFormat('en-IN', {style:'currency', currency:'INR'}).format(order.total)}</strong></p>
+          </div>
+        `;
+      }
+    </script>
+  </body>
+</html>

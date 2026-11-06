@@ -1,0 +1,42 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: white;
+}
+
+.container {
+    width: 170px;
+    height: 190px;
+    position: relative;
+}
+
+.black-box {
+    width: 135px;
+    height: 55px;
+    background-color: black;
+    position: absolute;
+    top: 0;
+    left: 5px;
+}
+
+.green-box {
+    width: 55px;
+    height: 135px;
+    background-color: #00a88f;
+    position: absolute;
+    top: 55px;
+    left: 5px;
+}
+
+.red-box {
+    width: 135px;
+    height: 135px;
+    background-color: red;
+    position: absolute;
+    top: 55px;
+    left: 34px;
+}

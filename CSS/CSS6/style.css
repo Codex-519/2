@@ -1,0 +1,33 @@
+body {
+    margin: 0;
+    padding: 5px;
+    font-family: "Times New Roman", serif;
+}
+
+.box {
+    background-color: red;
+    border: 6px solid yellowgreen;
+    padding: 4px;
+    margin: 5px 0;
+    color: white;
+    font-size: 14px;
+}
+
+a {
+    display: block;
+    margin: 10px 0;
+    color: blue;
+    font-size: 13px;
+}
+
+h3 {
+    margin: 12px 0;
+}
+
+h4 {
+    margin: 15px 0;
+}
+
+p:not(.box) {
+    margin: 10px 0;
+}

@@ -1,0 +1,38 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    cursor: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='48' height='48' viewBox='0 0 48 48'%3E%3Crect x='4' y='3' width='39' height='29' rx='4' fill='%2368A240' stroke='%23333336' stroke-width='2'/%3E%3Crect x='9' y='8' width='29' height='19' fill='%23D5D9CF' stroke='%23333336' stroke-width='2'/%3E%3Ccircle cx='27' cy='28' r='2.5' fill='%23FFD632' stroke='%23333336'/%3E%3Crect x='31' y='28' width='7' height='2' rx='1' fill='%23D8A128'/%3E%3Crect x='11' y='32' width='25' height='2' fill='%23333336'/%3E%3Cpath d='M20 34 L18 43 L30 43 L28 34Z' fill='%23D5D9CF' stroke='%23333336' stroke-width='2'/%3E%3Cpath d='M16 43 H32 L34 46 H14Z' fill='%23D8A128' stroke='%23333336' stroke-width='2'/%3E%3Crect x='4' y='28' width='9' height='19' rx='2' fill='%23FFD632' stroke='%23333336' stroke-width='2'/%3E%3Crect x='4' y='26' width='9' height='5' rx='2' fill='%23D8A128' stroke='%23333336' stroke-width='2'/%3E%3C/svg%3E") 10 10, auto;
+}
+
+.page {
+    height: 100vh;
+    border: 3px solid black;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+
+    height: 100%;
+}
+
+.box {
+    width: 270px;
+    height: 140px;
+    border: 3px solid green;
+}
+
+button {
+    margin-top: 5px;
+}
+
+.btn {
+    display: flex;
+    justify-content: center;
+    align-items:center;
+    gap: 10px;
+}

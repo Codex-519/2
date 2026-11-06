@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>grid</title>
+    <style>
+        *{
+            border:2px solid blue
+        }
+        .container {
+            display: grid;
+            height: 600px;
+            width: 600px;
+            border: 2px solid brown;
+            grid-template-columns: 100px 250px 250px ;
+            grid-template-rows: 150px 300px 40px;
+            grid-template-areas: "header" "body" "place" "adje" ; 
+            /* justify-content:space-evenly; */
+            align-items: flex-end;
+            
+
+        }
+
+        .sub {
+            /* height: 60px;
+            width: 60px; */
+            border: 2px solid blue;
+
+        }
+        .header{
+            grid-area:header;
+        }
+        .body{
+            grid-area:body;
+        }
+        .adje{
+            grid-area: adje;
+        }
+
+
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="header">header</div>
+        <div class="body">body </div>
+        <div class="cont">cont</div>
+        <div class="place">place</div>
+        <div class="adje">adje</div>
+        <div class="sub"></div>
+        <div class="sub"></div>
+        <div class="sub"></div>
+        <div class="sub"></div>
+        <div class="sub"></div>
+    </div>
+</body>
+
+</html>

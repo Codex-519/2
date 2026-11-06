@@ -1,0 +1,100 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Doraemon 3D World</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="app">
+    <header class="topbar">
+      <div class="brand">
+        <div class="brand-icon">D</div>
+        <div>
+          <h1>Doraemon <span>3D World</span></h1>
+          <p>AN INTERACTIVE CARTOON EXPERIENCE</p>
+        </div>
+      </div>
+      <div class="live-badge"><span></span> 3D WORLD</div>
+    </header>
+
+    <main class="layout">
+      <section class="stage">
+        <div class="stage-label">
+          <span>YOUR 3D COMPANION</span>
+          <span id="modeLabel">● WALKING MODE</span>
+        </div>
+
+        <div id="scene-container">
+          <div class="loading" id="loading">Building Doraemon's world...</div>
+        </div>
+
+        <div class="scene-caption">
+          <span class="caption-icon">✦</span>
+          <div>
+            <strong id="characterTitle">Let's go on an adventure!</strong>
+            <p id="characterMessage">Choose a mode or try a gadget.</p>
+          </div>
+        </div>
+
+        <div class="hint">DRAG TO ROTATE · SCROLL TO ZOOM</div>
+      </section>
+
+      <aside class="control-panel">
+        <div class="panel-heading">
+          <span class="eyebrow">CONTROL CENTER</span>
+          <h2>Your Doraemon</h2>
+          <p>Bring your favourite robot cat to life.</p>
+        </div>
+
+        <div class="section-title">MOVEMENT</div>
+        <div class="movement-grid">
+          <button class="action-btn active" id="walkBtn">
+            <span class="btn-icon">🚶</span>
+            <span><strong>Walk</strong><small>Explore the world</small></span>
+          </button>
+          <button class="action-btn" id="flyBtn">
+            <span class="btn-icon">🚁</span>
+            <span><strong>Fly</strong><small>Bamboo-copter</small></span>
+          </button>
+        </div>
+
+        <div class="section-title gadgets-title">MAGIC GADGETS</div>
+        <div class="gadget-list">
+          <button class="gadget-btn" id="doorBtn">
+            <span class="gadget-icon door-icon">🚪</span>
+            <span class="gadget-copy"><strong>Anywhere Door</strong><small>Open a magical portal</small></span>
+            <span class="arrow">↗</span>
+          </button>
+
+          <button class="gadget-btn" id="cop­terBtn">
+            <span class="gadget-icon copter-icon">✦</span>
+            <span class="gadget-copy"><strong>Take-copter</strong><small>Fly through the sky</small></span>
+            <span class="arrow">↗</span>
+          </button>
+
+          <button class="gadget-btn" id="pocketBtn">
+            <span class="gadget-icon pocket-icon">🎁</span>
+            <span class="gadget-copy"><strong>4D Pocket</strong><small>Discover a surprise</small></span>
+            <span class="arrow">↗</span>
+          </button>
+        </div>
+
+        <div class="bottom-card">
+          <div class="sparkle">✧</div>
+          <div>
+            <strong>Ready for adventure?</strong>
+            <p>Try every gadget and see what happens.</p>
+          </div>
+        </div>
+      </aside>
+    </main>
+
+    <footer>MADE WITH HTML · CSS · THREE.JS <span>✦</span> A LITTLE BIT OF MAGIC</footer>
+  </div>
+
+  <script type="module" src="script.js"></script>
+</body>
+</html>

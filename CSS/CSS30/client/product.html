@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Product | Aurelian Market</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/product.css" />
+    <link rel="stylesheet" href="css/responsive.css" />
+  </head>
+  <body>
+    <div class="topbar">
+      <div class="container topbar-inner">
+        <span>Free shipping on orders above ₹2,000</span>
+        <span>New arrivals every Friday</span>
+      </div>
+    </div>
+
+    <header class="header">
+      <div class="container navbar">
+        <a class="brand" href="index.html"><span class="brand-mark">A</span> <span>Aurelian</span></a>
+        <nav class="nav-links">
+          <a href="index.html">Home</a>
+          <a href="shop.html">Shop</a>
+          <a href="shop.html?category=Electronics" class="dropdown">Categories</a>
+          <a href="about.html">About</a>
+          <a href="contact.html">Contact</a>
+        </nav>
+        <div class="nav-actions">
+          <a class="wishlist-chip" href="wishlist.html">♡ <span class="wishlist-badge" data-wishlist-count>0</span></a>
+          <a class="cart-chip" href="cart.html">🛒 <span class="cart-badge" data-cart-count>0</span></a>
+          <a class="primary-btn" href="login.html">Login</a>
+        </div>
+      </div>
+    </header>
+
+    <main class="product-page">
+      <div class="container">
+        <div class="breadcrumbs">
+          <a href="index.html">Home</a>
+          <span>›</span>
+          <a href="shop.html">Shop</a>
+          <span>›</span>
+          <span>Product</span>
+        </div>
+        <div data-product-detail></div>
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="container footer-grid">
+        <div class="footer-col">
+          <a class="brand" href="index.html"><span class="brand-mark">A</span> <span>Aurelian</span></a>
+          <p style="margin-top: 14px; color: var(--muted);">Made for everyday premium living.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Supports</h4>
+          <ul>
+            <li><a href="contact.html">Help center</a></li>
+            <li><a href="orders.html">Track order</a></li>
+          </ul>
+        </div>
+      </div>
+    </footer>
+
+    <script src="js/products.js"></script>
+    <script src="js/main.js"></script>
+  </body>
+</html>

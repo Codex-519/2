@@ -1,0 +1,460 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>3D Solar System</title>
+
+<style>
+    
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  overflow: hidden;
+  background: radial-gradient(ellipse at center, #101a3b 0%, #030611 65%, #000 100%);
+  color: white;
+  font-family: Arial, sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.space {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  perspective: 1000px;
+  transform-style: preserve-3d;
+}
+
+.stars {
+  position: absolute;
+  inset: 0;
+  background-image:
+    radial-gradient(2px 2px at 10% 20%, white 99%, transparent),
+    radial-gradient(1px 1px at 70% 30%, white 99%, transparent),
+    radial-gradient(2px 2px at 35% 75%, white 99%, transparent),
+    radial-gradient(1px 1px at 90% 80%, white 99%, transparent),
+    radial-gradient(1px 1px at 50% 10%, white 99%, transparent),
+    radial-gradient(2px 2px at 80% 60%, white 99%, transparent),
+    radial-gradient(1px 1px at 20% 85%, white 99%, transparent);
+  background-size: 220px 220px;
+  animation: starsMove 40s linear infinite;
+}
+
+@keyframes starsMove {
+  to { transform: translateY(-220px); }
+}
+
+.nebula {
+  position: absolute;
+  width: 70vw;
+  height: 70vw;
+  max-width: 800px;
+  max-height: 800px;
+  background: radial-gradient(circle, #3436a322, #8b32ad10 40%, transparent 70%);
+  filter: blur(25px);
+}
+
+.solar {
+  position: relative;
+  width: 0;
+  height: 0;
+  transform-style: preserve-3d;
+  transform: rotateX(18deg);
+}
+
+.sun {
+  position: absolute;
+  width: 82px;
+  height: 82px;
+  border-radius: 50%;
+  left: -41px;
+  top: -41px;
+  background: radial-gradient(circle at 35% 30%, #fff9b0, #ffce31 28%, #ff7a00 62%, #e92a00);
+  box-shadow:
+    0 0 20px #ffbd32,
+    0 0 55px #ff8700,
+    0 0 110px #ff590077,
+    0 0 180px #ff770033;
+  animation: sunPulse 3s ease-in-out infinite alternate;
+  z-index: 5;
+}
+
+@keyframes sunPulse {
+  to {
+    box-shadow: 0 0 30px #ffe26b, 0 0 75px #ff8700, 0 0 150px #ff590066;
+  }
+}
+
+.orbit {
+  position: absolute;
+  left: 0;
+  top: 0;
+  border: 1px solid #8ca8ff35;
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  transform-style: preserve-3d;
+}
+
+.orbit-1 { width: 130px; height: 130px; }
+.orbit-2 { width: 195px; height: 195px; }
+.orbit-3 { width: 265px; height: 265px; }
+.orbit-4 { width: 345px; height: 345px; }
+.orbit-5 { width: 450px; height: 450px; }
+.orbit-6 { width: 555px; height: 555px; }
+.orbit-7 { width: 660px; height: 660px; }
+.orbit-8 { width: 765px; height: 765px; }
+
+.track {
+  position: absolute;
+  inset: 0;
+  border-radius: 50%;
+  animation: orbitSpin var(--duration) linear infinite;
+}
+
+@keyframes orbitSpin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+.planet {
+  position: absolute;
+  left: 50%;
+  top: 0;
+  width: var(--size);
+  height: var(--size);
+  margin-left: calc(var(--size) / -2);
+  margin-top: calc(var(--size) / -2);
+  border-radius: 50%;
+  background: var(--planet);
+  box-shadow: inset -5px -4px 9px #000a, inset 3px 3px 6px #ffffff70, 0 0 12px var(--glow);
+}
+
+.planet::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 50%;
+  background: linear-gradient(110deg, transparent 35%, #0007 90%);
+}
+
+.mercury {
+  --size: 9px;
+  --planet: radial-gradient(circle at 30% 30%, #ddd, #888 60%, #4b4b4b);
+  --glow: #aaaaaa55;
+}
+
+.venus {
+  --size: 15px;
+  --planet: radial-gradient(circle at 30% 25%, #fff0b5, #d9a35b 45%, #86522a);
+  --glow: #ffc47777;
+}
+
+.earth {
+  --size: 17px;
+  --planet: radial-gradient(circle at 35% 30%, #8cffff, #1689ee 35%, #06407c 70%);
+  --glow: #25aaffaa;
+  overflow: hidden;
+}
+
+.earth .land {
+  position: absolute;
+  width: 7px;
+  height: 5px;
+  background: #53d17b;
+  border-radius: 60% 30% 50% 20%;
+  left: 3px;
+  top: 4px;
+  z-index: 1;
+  transform: rotate(-25deg);
+}
+
+.mars {
+  --size: 13px;
+  --planet: radial-gradient(circle at 30% 25%, #ffb38c, #e4512d 55%, #702216);
+  --glow: #ff573355;
+}
+
+.jupiter {
+  --size: 34px;
+  --planet: repeating-linear-gradient(0deg, #b86d45 0 4px, #f0d0a1 4px 8px, #965237 8px 11px, #e7b987 11px 15px);
+  --glow: #dbad7b66;
+}
+
+.saturn {
+  --size: 28px;
+  --planet: repeating-linear-gradient(0deg, #d9c49a 0 5px, #aa936b 5px 8px, #f4dfad 8px 12px);
+  --glow: #e9d3a266;
+}
+
+.ring {
+  position: absolute;
+  width: 49px;
+  height: 17px;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%) rotate(-22deg);
+  border: 5px solid #d6bd88;
+  border-left-color: #f4e0b2;
+  border-right-color: #8c7755;
+  border-radius: 50%;
+  box-shadow: 0 0 5px #dfc99a66;
+}
+
+.uranus {
+  --size: 23px;
+  --planet: radial-gradient(circle at 30% 25%, #d6ffff, #68d9df 55%, #287b94);
+  --glow: #72e7ff66;
+}
+
+.neptune {
+  --size: 22px;
+  --planet: radial-gradient(circle at 30% 25%, #a6bdff, #345de5 55%, #14246f);
+  --glow: #4269ff88;
+}
+
+.label {
+  position: absolute;
+  left: 50%;
+  top: calc(var(--size) + 7px);
+  transform: translateX(-50%);
+  font-size: 10px;
+  color: #dce5ff;
+  white-space: nowrap;
+  text-shadow: 0 0 6px #000;
+  opacity: .8;
+}
+
+.heading {
+  position: absolute;
+  top: 28px;
+  left: 0;
+  right: 0;
+  text-align: center;
+  pointer-events: none;
+}
+
+.heading h1 {
+  font-size: clamp(22px, 4vw, 40px);
+  letter-spacing: 5px;
+  background: linear-gradient(90deg, #7bdfff, #fff, #c39bff);
+  color: transparent;
+  background-clip: text;
+  -webkit-background-clip: text;
+  text-shadow: 0 0 30px #568aff33;
+}
+
+.heading p {
+  margin-top: 9px;
+  color: #8495c5;
+  letter-spacing: 3px;
+  font-size: 10px;
+}
+
+.controls {
+  position: absolute;
+  bottom: 25px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  flex-wrap: wrap;
+  width: 95%;
+}
+
+button {
+  color: #dce9ff;
+  background: #121c35dd;
+  border: 1px solid #5d7ac477;
+  padding: 11px 16px;
+  border-radius: 20px;
+  cursor: pointer;
+  backdrop-filter: blur(10px);
+}
+
+button:hover {
+  background: #263d68;
+  box-shadow: 0 0 15px #547dff55;
+}
+
+.speed {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: #aebde0;
+  font-size: 12px;
+  background: #121c35dd;
+  border: 1px solid #5d7ac477;
+  border-radius: 20px;
+  padding: 9px 13px;
+}
+
+input { width: 90px; accent-color: #72baff; }
+
+@media (max-width: 800px) {
+  .solar { transform: rotateX(18deg) scale(.68); }
+  .heading h1 { letter-spacing: 2px; }
+  .orbit-8 { width: 660px; height: 660px; }
+  .orbit-7 { width: 570px; height: 570px; }
+  .orbit-6 { width: 480px; height: 480px; }
+  .orbit-5 { width: 390px; height: 390px; }
+  .orbit-4 { width: 305px; height: 305px; }
+  .orbit-3 { width: 230px; height: 230px; }
+  .orbit-2 { width: 165px; height: 165px; }
+  .orbit-1 { width: 110px; height: 110px; }
+}
+
+@media (max-height: 600px) {
+  .solar { transform: rotateX(18deg) scale(.65); }
+  .heading { top: 10px; }
+  .controls { bottom: 8px; }
+}
+</style>
+</head>
+
+<body>
+<div class="space">
+  <div class="stars"></div>
+  <div class="nebula"></div>
+
+  <div class="heading">
+    <h1>SOLAR SYSTEM</h1>
+    <p>AN IMMERSIVE COSMIC JOURNEY</p>
+  </div>
+
+  <div class="solar" id="solar">
+    <div class="sun"></div>
+
+    <div class="orbit orbit-1">
+      <div class="track" style="--duration: 4s">
+        <div class="planet mercury"><span class="label">Mercury</span></div>
+      </div>
+    </div>
+
+    <div class="orbit orbit-2">
+      <div class="track" style="--duration: 7s">
+        <div class="planet venus"><span class="label">Venus</span></div>
+      </div>
+    </div>
+
+    <div class="orbit orbit-3">
+      <div class="track" style="--duration: 10s">
+        <div class="planet earth">
+          <div class="land"></div>
+          <span class="label">Earth</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="orbit orbit-4">
+      <div class="track" style="--duration: 15s">
+        <div class="planet mars"><span class="label">Mars</span></div>
+      </div>
+    </div>
+
+    <div class="orbit orbit-5">
+      <div class="track" style="--duration: 23s">
+        <div class="planet jupiter"><span class="label">Jupiter</span></div>
+      </div>
+    </div>
+
+    <div class="orbit orbit-6">
+      <div class="track" style="--duration: 30s">
+        <div class="planet saturn">
+          <div class="ring"></div>
+          <span class="label">Saturn</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="orbit orbit-7">
+      <div class="track" style="--duration: 38s">
+        <div class="planet uranus"><span class="label">Uranus</span></div>
+      </div>
+    </div>
+
+    <div class="orbit orbit-8">
+      <div class="track" style="--duration: 46s">
+        <div class="planet neptune"><span class="label">Neptune</span></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="controls">
+    <button id="pause">⏸ Pause</button>
+    <button id="reset">↺ Reset</button>
+    <div class="speed">
+      <label for="speed">SPEED</label>
+      <input type="range" id="speed" min="0.3" max="3" step="0.1" value="1">
+      <span id="speedValue">1x</span>
+    </div>
+  </div>
+</div>
+
+<script>
+const tracks = document.querySelectorAll(".track");
+const pauseButton = document.getElementById("pause");
+const speedSlider = document.getElementById("speed");
+const speedValue = document.getElementById("speedValue");
+
+let paused = false;
+let speed = 1;
+
+function updateSpeed() {
+  speed = Number(speedSlider.value);
+  speedValue.textContent = speed.toFixed(1) + "x";
+
+  tracks.forEach(track => {
+    const duration = parseFloat(
+      getComputedStyle(track).getPropertyValue("--duration")
+    );
+
+    track.style.animationDuration = (duration / speed) + "s";
+  });
+}
+
+pauseButton.addEventListener("click", () => {
+  paused = !paused;
+
+  tracks.forEach(track => {
+    track.style.animationPlayState = paused ? "paused" : "running";
+  });
+
+  pauseButton.textContent = paused ? "▶ Play" : "⏸ Pause";
+});
+
+speedSlider.addEventListener("input", updateSpeed);
+
+document.getElementById("reset").addEventListener("click", () => {
+  paused = false;
+  speedSlider.value = 1;
+  updateSpeed();
+
+  tracks.forEach(track => {
+    track.style.animation = "none";
+    track.offsetHeight;
+    track.style.animation = "";
+    track.style.animationDuration =
+      (parseFloat(getComputedStyle(track).getPropertyValue("--duration")) / speed) + "s";
+    track.style.animationPlayState = "running";
+  });
+
+  pauseButton.textContent = "⏸ Pause";
+});
+
+updateSpeed();
+</script>
+</body>
+</html>

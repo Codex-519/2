@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Checkout | Aurelian Market</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/auth.css" />
+    <link rel="stylesheet" href="css/responsive.css" />
+  </head>
+  <body>
+    <header class="header">
+      <div class="container navbar">
+        <a class="brand" href="index.html"><span class="brand-mark">A</span> <span>Aurelian</span></a>
+      </div>
+    </header>
+
+    <main class="auth-shell">
+      <div class="auth-box" style="width: min(940px, 100%);">
+        <h1>Checkout</h1>
+        <div style="display:grid; grid-template-columns: 1.2fr 0.8fr; gap: 22px;">
+          <form id="checkoutForm" class="auth-form">
+            <div class="form-row">
+              <div class="input-group">
+                <label>Full name</label>
+                <input type="text" name="name" required />
+              </div>
+              <div class="input-group">
+                <label>Email address</label>
+                <input type="email" name="email" required />
+              </div>
+            </div>
+            <div class="form-row">
+              <div class="input-group">
+                <label>Address</label>
+                <input type="text" name="address" required />
+              </div>
+            </div>
+            <div class="form-row">
+              <div class="input-group">
+                <label>City</label>
+                <input type="text" name="city" required />
+              </div>
+              <div class="input-group">
+                <label>PIN code</label>
+                <input type="text" name="pin" required />
+              </div>
+            </div>
+            <button class="primary-btn" type="submit">Pay securely</button>
+          </form>
+          <aside class="summary-card" id="checkoutSummary" style="padding: 18px;">
+            <h3>Order summary</h3>
+            <div style="display:flex;justify-content:space-between;gap: 12px; margin-top: 16px; padding-top: 14px; border-top: 1px solid var(--line); font-weight: 800;">
+              <span>Total</span>
+              <strong id="checkoutTotal">₹0</strong>
+            </div>
+          </aside>
+        </div>
+      </div>
+    </main>
+
+    <script src="js/products.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/checkout.js"></script>
+  </body>
+</html>

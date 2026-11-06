@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JARVIS | Air Control</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="grid"></div>
+
+    <header class="topbar">
+        <div class="logo"><span>J</span>
+            <div>J.A.R.V.I.S.<small>AIR CONTROL SYSTEM</small></div>
+        </div>
+        <div class="system"><i></i><span id="systemStatus">SYSTEM STANDBY</span></div>
+        <div id="clock">00:00:00</div>
+    </header>
+
+    <main class="layout">
+        <aside class="panel side-panel">
+            <p class="eyebrow">01 / CONTROL CENTER</p>
+            <h2>Gesture Controls</h2>
+
+            <div class="gesture">
+                <span>✋</span>
+                <div><b>OPEN PALM</b><small>Activate system</small></div>
+                <kbd>ON</kbd>
+            </div>
+            <div class="gesture">
+                <span>☝</span>
+                <div><b>INDEX FINGER</b><small>Move air cursor</small></div>
+                <kbd>MOVE</kbd>
+            </div>
+            <div class="gesture">
+                <span>🤏</span>
+                <div><b>PINCH</b><small>Click a control</small></div>
+                <kbd>CLICK</kbd>
+            </div>
+            <div class="gesture">
+                <span>✊</span>
+                <div><b>CLOSED FIST</b><small>Pause interaction</small></div>
+                <kbd>PAUSE</kbd>
+            </div>
+
+            <div class="divider"></div>
+            <p class="eyebrow">LIVE TRACKING</p>
+            <div class="stat"><span>HAND DETECTION</span><b id="handStatus">NOT DETECTED</b></div>
+            <div class="stat"><span>GESTURE</span><b id="gestureStatus">—</b></div>
+            <div class="stat"><span>CURSOR X</span><b id="cursorX">—</b></div>
+            <div class="stat"><span>CURSOR Y</span><b id="cursorY">—</b></div>
+
+            <button class="control-btn" id="startButton">⌁ INITIALIZE CAMERA</button>
+            <p class="note" id="cameraMessage">Camera permission required to begin.</p>
+        </aside>
+
+        <section class="main-panel">
+            <div class="panel-top">
+                <span>NEURAL INTERFACE / 3D CORE</span>
+                <span class="live"><i></i> LIVE</span>
+            </div>
+
+            <div class="orb-area" id="orbArea">
+                <div class="orbit orbit-a"></div>
+                <div class="orbit orbit-b"></div>
+                <div class="orbit orbit-c"></div>
+                <div class="orb-glow"></div>
+                <div class="orb" id="orb">
+                    <div class="orb-highlight"></div>
+                    <div class="orb-band"></div>
+                    <div class="orb-band second"></div>
+                </div>
+                <div class="orbit-dot"></div>
+                <div class="crosshair"></div>
+                <div class="orb-label">J.A.R.V.I.S. CORE</div>
+            </div>
+
+            <h1 id="mainTitle">MOVE YOUR HAND<span>.</span></h1>
+            <p id="mainMessage">Initialize the camera and show your hand to begin.</p>
+
+            <div class="waveform" id="waveform">
+                <i></i><i></i><i></i><i></i><i></i><i></i><i></i>
+                <i></i><i></i><i></i><i></i><i></i><i></i>
+            </div>
+
+            <div class="actions">
+                <button class="action-card" data-action="SCAN">
+                    <span>◎</span><b>SCAN</b><small>Run visual scan</small>
+                </button>
+                <button class="action-card" data-action="SHIELD">
+                    <span>⬡</span><b>SHIELD</b><small>Toggle shield mode</small>
+                </button>
+                <button class="action-card" data-action="ENERGY">
+                    <span>ϟ</span><b>ENERGY</b><small>Boost core energy</small>
+                </button>
+                <button class="action-card" data-action="RESET">
+                    <span>⟳</span><b>RESET</b><small>Reset interface</small>
+                </button>
+            </div>
+
+            <div class="command-line">
+                <span>></span>
+                <p id="commandMessage">Awaiting gesture input...</p>
+                <span class="blink">_</span>
+            </div>
+        </section>
+
+        <aside class="panel camera-panel">
+            <p class="eyebrow">02 / VISION MODULE</p>
+            <h2>Hand Tracking</h2>
+            <div class="camera-frame">
+                <video id="webcam" autoplay playsinline muted></video>
+                <div class="camera-overlay"><span>● REC</span><span>VISION INPUT</span></div>
+                <div class="camera-corners"></div>
+            </div>
+            <p class="camera-caption" id="cameraCaption">Camera is currently offline.</p>
+
+            <div class="divider"></div>
+            <p class="eyebrow">SYSTEM MODULES</p>
+            <div class="module"><span>Vision engine</span><b id="visionModule">OFFLINE</b></div>
+            <div class="module"><span>Gesture engine</span><b id="gestureModule">OFFLINE</b></div>
+            <div class="module"><span>Air pointer</span><b id="pointerModule">OFFLINE</b></div>
+
+            <div class="tip">
+                <span>✦ QUICK TIP</span>
+                Keep your full hand visible and stand in a well-lit area. Pinch your thumb and index finger together to
+                click.
+            </div>
+        </aside>
+    </main>
+
+    <div id="airCursor"><span></span></div>
+    <div id="toast">SYSTEM READY</div>
+
+    <footer>
+        <span>JARVIS AIR INTERFACE v2.0</span>
+        <span>LOCAL CAMERA PROCESSING</span>
+        <span>GESTURE-BASED CONTROL</span>
+    </footer>
+
+    <script type="module" src="script.js"></script>
+</body>
+
+</html>

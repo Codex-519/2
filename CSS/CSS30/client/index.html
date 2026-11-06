@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Aurelian Market — modern ecommerce storefront for fashion, electronics, home essentials, and everyday premium products." />
+    <title>Aurelian Market | Premium shopping, everyday essentials</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/responsive.css" />
+  </head>
+  <body>
+    <div class="topbar">
+      <div class="container topbar-inner">
+        <span>Free shipping on orders above ₹2,000</span>
+        <span>New arrivals every Friday</span>
+      </div>
+    </div>
+
+    <header class="header">
+      <div class="container navbar">
+        <a class="brand" href="index.html" aria-label="Aurelian Market home">
+          <span class="brand-mark">A</span>
+          <span>Aurelian</span>
+        </a>
+
+        <nav class="nav-links" aria-label="Main navigation">
+          <a href="index.html">Home</a>
+          <a href="shop.html">Shop</a>
+          <a href="shop.html?category=Electronics" class="dropdown">Categories</a>
+          <a href="shop.html">Deals</a>
+          <a href="about.html">About</a>
+          <a href="contact.html">Contact</a>
+        </nav>
+
+        <div class="nav-actions">
+          <label class="search-box" aria-label="Search products">
+            <span>⌕</span>
+            <input type="text" placeholder="Search products" id="headerSearch" />
+          </label>
+          <a class="wishlist-chip" href="wishlist.html" aria-label="Wishlist">
+            ♡
+            <span class="wishlist-badge" data-wishlist-count>0</span>
+          </a>
+          <a class="cart-chip" href="cart.html" aria-label="Cart">
+            🛒
+            <span class="cart-badge" data-cart-count>0</span>
+          </a>
+          <a class="primary-btn" href="login.html">Login</a>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <section class="hero">
+        <div class="container hero-inner">
+          <div class="hero-copy">
+            <div class="eyebrow">Premium everyday living</div>
+            <h1>Own better things <br /><span style="color: var(--green);">for every day.</span></h1>
+            <p>Find premium essentials for home, wellness, fashion, and digital life — curated for modern Indian lifestyles.</p>
+            <div class="cta-row">
+              <a class="primary-btn" href="shop.html">Shop now</a>
+              <a class="secondary-btn" href="about.html">Explore more</a>
+            </div>
+            <div class="hero-stats">
+              <div class="stat-box"><strong>25k+</strong><span>happy shoppers</span></div>
+              <div class="stat-box"><strong>4.8/5</strong><span>average rating</span></div>
+              <div class="stat-box"><strong>2 day</strong><span>dispatch speed</span></div>
+            </div>
+          </div>
+
+          <div class="hero-visual" aria-label="Curated premium shopping showcase">
+            <div class="circle-bubble"></div>
+            <div class="badge-floating badge-top">Up to 60% off</div>
+            <div class="badge-floating badge-bottom">Free delivery</div>
+            <div class="hero-card">
+              <img src="https://images.unsplash.com/photo-1524758631624-e2822e304c36?auto=format&fit=crop&w=900&q=80" alt="Premium home and lifestyle products" />
+            </div>
+            <div class="pill-bubble">New season drop</div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="container">
+          <div class="section-header">
+            <div>
+              <h2>Shop by category</h2>
+              <p>Curated categories for modern living</p>
+            </div>
+          </div>
+          <div class="category-grid">
+            <a class="category-card" href="shop.html?category=Electronics">
+              <div class="category-icon">📱</div>
+              <h3>Electronics</h3>
+              <span>Fresh tech</span>
+            </a>
+            <a class="category-card" href="shop.html?category=Fashion">
+              <div class="category-icon">👗</div>
+              <h3>Fashion</h3>
+              <span>Everyday style</span>
+            </a>
+            <a class="category-card" href="shop.html?category=Beauty">
+              <div class="category-icon">💄</div>
+              <h3>Beauty</h3>
+              <span>Glow essentials</span>
+            </a>
+            <a class="category-card" href="shop.html?category=Home & Living">
+              <div class="category-icon">🏠</div>
+              <h3>Home & Living</h3>
+              <span>Smart comfort</span>
+            </a>
+            <a class="category-card" href="shop.html?category=Accessories">
+              <div class="category-icon">👜</div>
+              <h3>Accessories</h3>
+              <span>Useful extras</span>
+            </a>
+            <a class="category-card" href="shop.html?category=Sports">
+              <div class="category-icon">🏋️</div>
+              <h3>Sports</h3>
+              <span>Move better</span>
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="container">
+          <div class="section-header">
+            <div>
+              <h2>Trending products</h2>
+              <p>Most loved essentials from our community</p>
+            </div>
+            <a href="shop.html" class="view-link">View all products</a>
+          </div>
+          <div class="product-grid" data-home-products></div>
+        </div>
+      </section>
+
+      <section class="section flash-banner-wrap">
+        <div class="container flash-banner">
+          <div class="flash-copy">
+            <div class="eyebrow" style="color: #dff3ca;">Flash deals</div>
+            <h2>Big savings on everyday favorites</h2>
+            <p>Fresh deals this week before they’re gone.</p>
+          </div>
+          <div class="countdown" data-deal-timer aria-label="Flash deals countdown"></div>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="container">
+          <div class="section-header">
+            <div>
+              <h2>Why choose us</h2>
+              <p>Built for trust, speed, and convenience</p>
+            </div>
+          </div>
+          <div class="feature-grid">
+            <div class="feature-card">
+              <div class="feature-icon">🔒</div>
+              <h3>Secure Payment</h3>
+              <p>Protected checkout with trusted payment flows and secure processing.</p>
+            </div>
+            <div class="feature-card">
+              <div class="feature-icon">🚚</div>
+              <h3>Fast Delivery</h3>
+              <p>Quick dispatch with dependable delivery across major cities in India.</p>
+            </div>
+            <div class="feature-card">
+              <div class="feature-icon">↩️</div>
+              <h3>Easy Returns</h3>
+              <p>Hassle-free returns on checked items to keep shopping stress-free.</p>
+            </div>
+            <div class="feature-card">
+              <div class="feature-icon">💬</div>
+              <h3>Customer Support</h3>
+              <p>Friendly support to help before, during, and after checkout.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="container">
+          <div class="section-header">
+            <div>
+              <h2>Customer reviews</h2>
+              <p>Shoppers trust Aurelian Market</p>
+            </div>
+          </div>
+          <div class="testimonial-grid">
+            <article class="testimonial-card">
+              <div class="review-stars">★★★★★</div>
+              <p>“Beautiful products, fast delivery, and the packaging feels premium from start to finish.”</p>
+              <div class="author">
+                <div class="author-badge">A</div>
+                <div><strong>Arya S.</strong><small>Bengaluru</small></div>
+              </div>
+            </article>
+            <article class="testimonial-card">
+              <div class="review-stars">★★★★★</div>
+              <p>“I loved the quality of the home accessories. Super polished experience and quick support.”</p>
+              <div class="author">
+                <div class="author-badge">M</div>
+                <div><strong>Mehul R.</strong><small>Pune</small></div>
+              </div>
+            </article>
+            <article class="testimonial-card">
+              <div class="review-stars">★★★★★</div>
+              <p>“The site feels premium and the product quality matches the brand promise. Highly recommended.”</p>
+              <div class="author">
+                <div class="author-badge">N</div>
+                <div><strong>Nisha K.</strong><small>Delhi</small></div>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="newsletter">
+        <div class="container newsletter-box">
+          <div>
+            <h2>Get fresh deals in your inbox</h2>
+            <p>Exclusive offers, launch alerts, and curated picks.</p>
+          </div>
+          <form class="newsletter-form">
+            <input type="email" placeholder="Your email address" aria-label="Email address" />
+            <button class="primary-btn" type="submit">Subscribe</button>
+          </form>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-grid">
+          <div class="footer-col">
+            <a class="brand" href="index.html" aria-label="Aurelian home">
+              <span class="brand-mark">A</span>
+              <span>Aurelian</span>
+            </a>
+            <p style="margin-top: 14px; color: var(--muted);">Thoughtful essentials for everyday life — selected for quality, style, and convenience.</p>
+            <div class="socials">
+              <a href="#">f</a>
+              <a href="#">in</a>
+              <a href="#">◎</a>
+            </div>
+          </div>
+          <div class="footer-col">
+            <h4>About</h4>
+            <ul>
+              <li><a href="about.html">Our story</a></li>
+              <li><a href="shop.html">Shop</a></li>
+              <li><a href="contact.html">Journal</a></li>
+            </ul>
+          </div>
+          <div class="footer-col">
+            <h4>Quick Links</h4>
+            <ul>
+              <li><a href="shop.html">New arrivals</a></li>
+              <li><a href="shop.html">Deals</a></li>
+              <li><a href="cart.html">Cart</a></li>
+            </ul>
+          </div>
+          <div class="footer-col">
+            <h4>Customer Service</h4>
+            <ul>
+              <li><a href="contact.html">Contact us</a></li>
+              <li><a href="orders.html">Orders</a></li>
+              <li><a href="profile.html">Account</a></li>
+            </ul>
+          </div>
+          <div class="footer-col">
+            <h4>Contact</h4>
+            <ul>
+              <li>hello@aurelian.in</li>
+              <li>+91 98765 43210</li>
+              <li>7th Floor, Lotus Avenue, Bengaluru</li>
+            </ul>
+          </div>
+        </div>
+        <div class="footer-meta">
+          <span>© 2026 Aurelian Market</span>
+          <span>Privacy Policy · Terms of Service</span>
+        </div>
+      </div>
+    </footer>
+
+    <script src="js/products.js"></script>
+    <script src="js/main.js"></script>
+    <script>
+      document.querySelector('.newsletter-form')?.addEventListener('submit', (event) => {
+        event.preventDefault();
+        showToast('Thanks for subscribing');
+      });
+    </script>
+  </body>
+</html>
